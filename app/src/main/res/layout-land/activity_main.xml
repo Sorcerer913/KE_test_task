@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".views.MainActivity"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_padding"
+        android:paddingRight="@dimen/activity_padding"
+        android:paddingLeft="@dimen/activity_padding"
+        >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+            <FrameLayout
+                android:id="@+id/container_wallets"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                android:layout_marginEnd="@dimen/list_margin"
+                />
+            <FrameLayout
+                android:id="@+id/container_histories"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:layout_width="wrap_content"
+                />
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

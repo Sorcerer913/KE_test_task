@@ -1,0 +1,53 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.maxemelyanov.prod"
+        minSdk 24
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation "com.github.moxy-community:moxy:2.2.2"
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    annotationProcessor "com.github.moxy-community:moxy-compiler:2.2.2"
+    implementation "com.github.moxy-community:moxy-app-compat:2.2.2"
+//    implementation "com.github.moxy-community:moxy-android:+"
+//    implementation "com.github.moxy-community:moxy-material:+"
+
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:+"
+
+    implementation 'com.squareup.okhttp3:logging-interceptor:+'
+
+    implementation 'com.google.code.gson:gson:+'
+    implementation 'com.squareup.retrofit2:retrofit:+'
+    implementation 'com.squareup.retrofit2:converter-gson:+'
+
+    implementation 'androidx.appcompat:appcompat:+'
+    implementation 'com.google.android.material:material:+'
+    implementation 'androidx.constraintlayout:constraintlayout:+'
+    testImplementation 'junit:junit:+'
+    androidTestImplementation 'androidx.test.ext:junit:+'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:+'
+}
