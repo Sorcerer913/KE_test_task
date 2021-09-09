@@ -40,8 +40,6 @@ public class HistoriesPresenter extends MvpPresenter<IHistoriesView> {
 
         getViewState().loading();
 
-//        if (histories != null) getViewState().update(histories);
-
         Call<ResponseHistories> call = service.getHistoriesData();
         call.enqueue(new Callback<ResponseHistories>() {
             @Override

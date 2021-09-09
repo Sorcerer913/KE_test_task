@@ -67,10 +67,10 @@ public class WalletsFragment extends MvpAppCompatFragment implements IWalletsVie
         recycler_view_adapter = new CustomRecyclerViewAdapter<>(getContext(), wallets_list);
         recyclerView.setAdapter(recycler_view_adapter);
 
-        WalletData data = new WalletData();
-        data.setWalletName("TestWallet");
-        data.setBalance("1,000,000");
-        wallets_list.add(data);
+//        WalletData data = new WalletData();
+//        data.setWalletName("TestWallet");
+//        data.setBalance("1,000,000");
+//        wallets_list.add(data);
 
         view_model = new ViewModelProvider(getActivity()).get(/*"WalletsViewModel",*/ WalletsViewModel.class);
         view_model.getWallets().observe(getViewLifecycleOwner(), this::updateUI);

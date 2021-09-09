@@ -39,8 +39,6 @@ public class WalletsPresenter extends MvpPresenter<IWalletsView> {
 
         getViewState().loading();
 
-//        if (wallets != null) getViewState().update(wallets);
-
         Call<ResponseWallets> call = service.getWalletsData();
         call.enqueue(new Callback<ResponseWallets>() {
             @Override

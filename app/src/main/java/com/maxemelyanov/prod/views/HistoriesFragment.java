@@ -72,14 +72,14 @@ public class HistoriesFragment extends MvpAppCompatFragment implements IHistorie
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
         recyclerView.setAdapter(recycler_view_adapter);
 
-        HistoriesData data = new HistoriesData();
-        data.setAmount("T");
-        data.setCurrency("T");
-        data.setBalance("1,000,000");
-        data.setEntry("T");
-        data.setSender("T");
-        data.setRecipient("T");
-        histories_list.add(data);
+//        HistoriesData data = new HistoriesData();
+//        data.setAmount("T");
+//        data.setCurrency("T");
+//        data.setBalance("1,000,000");
+//        data.setEntry("T");
+//        data.setSender("T");
+//        data.setRecipient("T");
+//        histories_list.add(data);
 
         view_model = new ViewModelProvider(getActivity()).get(/*"HistoriesViewModel",*/ HistoriesViewModel.class);
         view_model.getHistories().observe(getViewLifecycleOwner(), this::updateUI);
